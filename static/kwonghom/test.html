@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kwong "Tommy" Hom</title>
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+	<body style="text-align:center">
+		<ul class="nav nav-pills nav-justified">
+		  <li class="active" ><a href="#home" data-toggle="tab">Home</a></li>
+		  <li><a href="#life" data-toggle="tab">About</a></li>
+		  <li><a href="#celebrate" data-toggle="tab">Photos</a></li>
+		  <li><a href="#more" id="#guestbookbutton" data-toggle="tab">Guestbook</a></li>
+		</ul>
+		<div class="row ">
+			<!-- LEFT COLUMN-->
+			<div id="leftmost" class="fittoheight container col-md-3">
+				
+			</div>
+			<!-- LEFT COLUMN-->
+
+			<!-- MIDDLE COLUMN-->
+			<div class="tab-content col-md-6 nav-tabs tab-pane" data-toggle="tab">
+				<h1 style="font-size:50px;font-weight:bold">Kwong "Tommy" Hom</h1>
+				<i>October 24, 1929 – October 11, 2015</i>
+				<br/><br/>
+
+				<div class="detail nav-tabs tab-pane active" id="home">
+					<p >
+
+						<h2>
+						Please join us in a celebration of his life on <span>Saturday, October 24, 2015</span>
+						</h2>
+						<br/><br/>
+						A memorial service will be held at 10 am at Alhambra True Light Presbyterian Church, 20 W. Commonwealth Ave., Alhambra, CA. Lunch will follow at NBC Seafood Restaurant, 404 S. Atlantic Blvd., Monterey Park, CA.
+						<br/><br/>
+						Kwong “Tommy” passed away on October 11, 2015 due to complications of pneumonia. He is survived by his wife, Betty Hom; children, Nancy (Dick) Lem, Robert Hom, Natalie (Danny) Hum, Noreen (Brian) Soria; grandchildren, Mark and Scott Lem, Melissa Charpied and Alex Hom, Noelle, Nadine and Nicholas Hum, Nathan and Jonathan Soria; and great granddaughter, Cadence Charpied.
+						<br/><br/>
+						<i>(Note: Limited parking for elderly/handicapped only at Alhambra True Light Presbyterian Church site. Additional parking is available across the street at the Alhambra Superior Court building on 1st Street.)</i>
+
+					</p>
+
+				</div>
+
+				<div class="detail nav-tabs tab-pane active" id="life">
+					<p >
+					Please check back at this site for more information in the next few days.
+					</p>
+				</div>
+
+				<div class="detail nav-tabs tab-pane" id="celebrate">
+					<p>
+					More photos coming soon.
+					</p>
+
+					<div id="photogallery">
+
+					</div>
+				</div>
+
+				<div class="detail nav-tabs tab-pane" id="more">
+					<div class="form-group">
+					  <label for="name">Name:</label>
+					  <input type="text" class="form-control" id="name">
+					  <label for="message">Message:</label>
+					  <textarea type="textarea" class="form-control" id="message"></textarea>
+					  <br/>
+					  <button onclick="submitComment">Submit</button>
+					</div>
+					<div id="commentpane">
+
+					</div>
+				</div>
+			</div>
+			<!-- MIDDLE COLUMN-->
+
+			<!-- RIGHT COLUMN-->
+			<div id="rightmost" class="fittoheight container col-md-3">
+				
+			</div>
+			<!-- RIGHT COLUMN-->
+		</div>
+
+	</body>
+	<div class="modal fade" id="photomodal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-body">
+	       <img style="max-width: 100%;max-height: 100%;"src="#"/>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<script src="js/basic.js"></script>
+</html>

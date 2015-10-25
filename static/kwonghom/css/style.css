@@ -1,0 +1,76 @@
+a{}
+a:hover{color:black;}
+h1{}
+
+body{
+	padding: 15px;
+	padding-left:25px;
+	font:Arial;
+	font-size:20px;
+
+}
+
+label{text-align:left;}
+
+
+ul a{
+	font-weight: bold;
+	color: black;
+	font-size:30px;
+}
+
+li.imgli {
+  list-style:none;
+  margin-bottom:25px;
+  overflow: hidden;
+  height:95px;
+}
+
+.detail{
+	display:none;
+	border:none;
+}
+
+.fittoheight{
+	height:100px;
+	background-size:100%;
+	background-repeat:no-repeat;
+
+}
+
+.commentunit{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 7px;
+	margin-bottom:5px;
+	border: 1px solid #DCDCDC;
+	background-color: #EEE;
+	min-height: 95px;
+	overflow:overlay;
+	vertical-align: middle;
+}
+
+#leftmost{	
+	background-image: url("./../images/KwongHomGreyPortrait.jpg");
+ }
+
+
+#rightmost{
+	background-image: url("./../images/KwongHomColorPortrait.jpg");
+}
+
+.row{
+	padding-top:25px;
+}
+.nav-tabs{
+	border:none;
+}
+
+.nav-pills a{
+	margin-left: 5px;
+	margin-right:5px;
+	background-color: #eee;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background-color: #A8A8A8;
+}
