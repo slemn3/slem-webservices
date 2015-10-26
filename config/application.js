@@ -3,6 +3,7 @@ var env         = process.env.NODE_ENV || 'development'
   , express     = require("express")
   , fs          = require("fs")
   , commentService
+  , oddsService
 
 console.log("Loading App in " + env + " mode.")
 
@@ -54,8 +55,10 @@ global.App = {
          console.log("DB start");
          var commentService = new CommentService(dbsession);
          this.commentService = commentService;
-      });
 
+         var oddsService = new OddsService(dbsession);
+         this.oddsService = oddsService;
+      });
       
     }
   }
@@ -81,3 +84,5 @@ App.app.use(App.app.router)
 // Bootstrap teh [sic] routes
 App.require("config/routes")(App.app)
 App.require('app/service/CommentDAO').CommentDAO
+App.require('app/service/OddsDAO').OddsDAO
+

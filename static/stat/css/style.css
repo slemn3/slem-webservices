@@ -1,0 +1,33 @@
+a{}
+a:hover{color:black;}
+h1{}
+
+body{
+	padding: 15px;
+	padding-left:25px;
+	font:Arial;
+	font-size:20px;
+
+}
+
+label{text-align:left;}
+
+
+ul a{
+	font-weight: bold;
+	color: black;
+	font-size:30px;
+}
+
+td, th{
+	padding-right:35px;
+}
+
+.playable{
+	text-align: center;
+}
+
+.playable:hover{
+	color:white;
+	background-color: gray;
+}
