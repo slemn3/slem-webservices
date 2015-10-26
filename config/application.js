@@ -53,6 +53,7 @@ global.App = {
       
       App.DB.startup('localhost', 27017, 'comments', function(error, dbsession){
          console.log("DB start");
+         dbsession.abc = 'abc';
          var commentService = new CommentService(dbsession);
          this.commentService = commentService;
 
