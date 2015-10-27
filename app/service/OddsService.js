@@ -12,7 +12,17 @@ OddsService = function(dbsession){
 
 
 OddsService.prototype.getDateFull = function(date, res){
-	this.oddsDAO.getDateFull(date, this.checkAndSendResponse, res);
+	this.oddsDAO.getDateFull(date, this.checkAndSendResponse, this.addDateFull, res);
+}
+
+OddsService.prototype.addDateFull = function(data, res){
+	console.log(data)
+	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		data = xmlhttp.responseText;
+		res.send(data);
+		this.oddsDAO.addDateFull(data.DAY);
+
+	}
 }
 
 OddsService.prototype.sendResponse = function(data, res){
@@ -20,26 +30,26 @@ OddsService.prototype.sendResponse = function(data, res){
 }
 
 OddsService.prototype.checkAndSendResponse = function(date, data, res, dao){
-	console.log(dao.addDateFull);
 	if(data == null || data == []){
 		console.log('Odds for Retrieved Date is null');
+		var url = "/odds/feeds/day/"+date.replace('-','');
 		var checkDate = date.replace('-', '');
-		oddd = dao;
 		xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function() {
 			console.log("On Ready State Change Called")
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				console.log("On Ready State "+xmlhttp.readyState+" "+xmlhttp.status)
 				data = xmlhttp.responseText;
-				console.log(data);
-				dao.addDateFull(data);
+				var outputdata = JSON.parse(data);
+				dao.addDateFull(outputdata.DAY);
 
 				res.send(data);
 			}
 		}
-		xmlhttp.open("GET","/odds/feeds/day/20151026", true);
+		xmlhttp.open("GET", url , true);
 		xmlhttp.send();
 	} else {
+		console.log("SEND RES DATA");
 		res.send(data);
 	}
 } 
